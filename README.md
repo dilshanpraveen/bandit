@@ -10,8 +10,8 @@ bandit0@melinda:~$
 
 #Bandit 1 -> Bandit 2    
 root@bt:~# ssh bandit1@bandit.labs.overthewire.org      
-bandit1@bandit.labs.overthewire.org's password:boJ9jbbUNNfktd78OOpsqOltutMc3MY1   
-bandit1@melinda:~$ ls  
+bandit1@bandit.labs.overthewire.org's password:boJ9jbbUNNfktd78OOpsqOltutMc3MY1  
+bandit1@melinda:~$ ls     
 -  
 bandit1@melinda:~$ ls -A   
 -  .bash_logout  .bashrc  .profile  
@@ -26,7 +26,7 @@ bandit2@melinda:~$ ls
 spaces in this filename  
 bandit2@melinda:~$ cat spaces\ in\ this\ filename   
 UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK    
-bandit2@melinda:~$   
+bandit2@melinda:~$     
 
 #Bandit 3 -> Bandit 4  
 root@bt:~# ssh bandit3@bandit.labs.overthewire.org  
@@ -64,9 +64,8 @@ bandit4@melinda:~/inhere$ cat ./-file00
 koReBOKuIDDepwhWk7jZC0RTdopnAYKh   
 bandit4@melinda:~/inhere$    
   
-
 #Bandit 5 -> Bandit 6  
-ssh bandit5@bandit.labs.overthewire.org  
+root@bt:~# ssh bandit5@bandit.labs.overthewire.org    
 koReBOKuIDDepwhWk7jZC0RTdopnAYKh  
 ls  
 cd inhere  
