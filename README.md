@@ -8,41 +8,62 @@ bandit0@melinda:~$ cat readme
 boJ9jbbUNNfktd78OOpsqOltutMc3MY1  
 bandit0@melinda:~$     
 
-#Bandit 1 -> Bandit 2  
-ssh bandit1@bandit.labs.overthewire.org    
-boJ9jbbUNNfktd78OOpsqOltutMc3MY1  
-ls   
-ls -A  
-cat ./-   
+#Bandit 1 -> Bandit 2    
+root@bt:~# ssh bandit1@bandit.labs.overthewire.org      
+bandit1@bandit.labs.overthewire.org's password:boJ9jbbUNNfktd78OOpsqOltutMc3MY1   
+bandit1@melinda:~$ ls  
+-  
+bandit1@melinda:~$ ls -A   
+-  .bash_logout  .bashrc  .profile  
+bandit1@melinda:~$ cat ./-  
+CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9  
+bandit1@melinda:~$       
 
 #Bandit 2 -> Bandit 3  
-ssh bandit2@bandit.labs.overthewire.org  
-CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9  
-ls  
-cat spaces\ in\ this\ filename  
+root@bt:~# ssh bandit2@bandit.labs.overthewire.org  
+bandit2@bandit.labs.overthewire.org's password:CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9    
+bandit2@melinda:~$ ls  
+spaces in this filename  
+bandit2@melinda:~$ cat spaces\ in\ this\ filename   
+UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK    
+bandit2@melinda:~$   
 
 #Bandit 3 -> Bandit 4  
-ssh bandit3@bandit.labs.overthewire.org  
-UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK  
-ls  
-cd inhere  
-ls -A  
-cat .hidden  
-
+root@bt:~# ssh bandit3@bandit.labs.overthewire.org  
+bandit3@bandit.labs.overthewire.org's password:UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK      
+bandit3@melinda:~$ ls  
+inhere  
+bandit3@melinda:~$ cd inhere/   
+bandit3@melinda:~/inhere$ ls    
+bandit3@melinda:~/inhere$ ls -A   
+.hidden   
+bandit3@melinda:~/inhere$ cat .hidden    
+pIwrPrtPN36QITSp3EQaw936yaFoFgAB   
+bandit3@melinda:~/inhere$    
+  
 #Bandit 4 -> Bandit 5
-ssh bandit4@bandit.labs.overthewire.org  
-pIwrPrtPN36QITSp3EQaw936yaFoFgAB 
-ls  
-cd inhere  
-ls  
-cat ./-file00    
-cat ./-file01  
-cat ./-file02  
-cat ./-file03  
-cat ./-file04  
-cat ./-file05  
-cat ./-file06  
-cat ./-file07   
+root@bt:~# ssh bandit4@bandit.labs.overthewire.org    
+bandit4@bandit.labs.overthewire.org's password:pIwrPrtPN36QITSp3EQaw936yaFoFgAB    
+bandit4@melinda:~$ ls  
+inhere  
+bandit4@melinda:~$ cd inhere/  
+bandit4@melinda:~/inhere$ ls  
+-file00  -file02  -file04  -file06  -file08   
+-file01  -file03  -file05  -file07  -file09   
+bandit4@melinda:~/inhere$ cat ./-file00   
+;�-i�(��z��У��ޘ�鑾bandit4@melinda:~/inhere$ cat ./-file01
+?�@c   
+    O8�L��c�Ч7�zb~��ף���Ubandit4@melinda:~/inhere$ cat ./-file02
+�g�f�4�6+>"��B�Vx��d��;de�Obandit4@melinda:~/inhere$ cat ./-file03
+�:n����8S��Ѕ[�/q�(��@��M�.�tbandit4@melinda:~/inhere$ cat ./-file04
+����+��5�`�R
+�1*6C�u#Nr�bandit4@melinda:~/inhere$ cat ./-file05
+��hZ����P�邚���{#��TP��6�]��X:bandit4@melinda:~/inhere$ cat ./-file06
+����!��>P�
+d{��ҏH�xX|�bandit4@melinda:~/inhere$ cat ./-file07
+koReBOKuIDDepwhWk7jZC0RTdopnAYKh   
+bandit4@melinda:~/inhere$    
+  
 
 #Bandit 5 -> Bandit 6  
 ssh bandit5@bandit.labs.overthewire.org  
@@ -174,21 +195,6 @@ ls -l
 #Bandit 20 -> Bandit 21  
 ssh bandit20@bandit.labs.overthewire.org  
 GbKksEFF4yrVs6il55v6gwY5aVje5f0j    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
