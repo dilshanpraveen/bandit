@@ -155,18 +155,21 @@ ls
 diff passwords.new passwords.old  
 
 #Bandit 18 -> Bandit 19  
-ssh bandit18@bandit.labs.overthewire.org  
+ssh -T bandit18@bandit.labs.overthewire.org  
 kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd    
+ls 
+cat readme   
 
 #Bandit 19 -> Bandit 20  
-
 ssh bandit19@bandit.labs.overthewire.org
-bandit19
-IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
+IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x  
+ls  
+ls -l  
+./bandit20-do cat /etc/bandit_pass/bandit20  
 
-ssh bandit20@bandit.labs.overthewire.org
-bandit20
-GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+#Bandit 20 -> Bandit 21  
+ssh bandit20@bandit.labs.overthewire.org  
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j     
 
 
 
