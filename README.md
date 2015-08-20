@@ -145,6 +145,28 @@ cluFn7wTiGryunymYOu4RcffSxQluehd
 namp -p 31000-32000 localhost  
 echo cluFn7wTiGryunymYOu4RcffSxQluehd | openssl s_client -ign_eof -connect localhost:31790  
 
+mkdir -p /tmp/strom2  
+cd /tmp/strom2  
+touch mmm.private  
+ssh -i ./mm.private bandit17@localhost  
+
+#Bandit 17 -> Bandit 18
+ls  
+diff passwords.new passwords.old  
+
+#Bandit 18 -> Bandit 19  
+ssh bandit18@bandit.labs.overthewire.org  
+kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd    
+
+#Bandit 19 -> Bandit 20  
+
+ssh bandit19@bandit.labs.overthewire.org
+bandit19
+IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
+
+ssh bandit20@bandit.labs.overthewire.org
+bandit20
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
 
 
 
