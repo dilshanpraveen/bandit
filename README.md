@@ -1,9 +1,12 @@
 **IT13007652**
 #Bandit 0 -> Bandit 1  
-ssh bandit0@bandit.labs.overthewire.org    
-bandit0
-ls  
-vi readme  
+root@bt:~# ssh bandit0@bandit.labs.overthewire.org  
+bandit0@bandit.labs.overthewire.org's password:bandit0  
+bandit0@melinda:~$ ls        
+readme  
+bandit0@melinda:~$ cat readme   
+boJ9jbbUNNfktd78OOpsqOltutMc3MY1  
+bandit0@melinda:~$     
 
 #Bandit 1 -> Bandit 2  
 ssh bandit1@bandit.labs.overthewire.org    
