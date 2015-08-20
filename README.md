@@ -170,7 +170,12 @@ ls -l
 
 #Bandit 20 -> Bandit 21  
 ssh bandit20@bandit.labs.overthewire.org  
-GbKksEFF4yrVs6il55v6gwY5aVje5f0j     
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j    
+
+
+root@bt:~# ssh bandit0@bandit.labs.overthewire.org
+
+bandit0@bandit.labs.overthewire.org's password: 
 
 
 
