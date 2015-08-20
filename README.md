@@ -84,6 +84,81 @@ ssh bandit11@bandit.labs.overthewire.org
 IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR  
 cat data.txt | tr '[A-Za-z]' '[N-ZA-Mn-za-m]'  
 
+#Bandit 12 -> Bandit 13   
+ssh bandit12@bandit.labs.overthewire.org  
+5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu  
+ls  
+file data.txt  
+cd /tmp  
+mkdir strom1  
+cd strom1  
+cp ./data.txt /tmp/storm1  
+xxd -r data.txt 5
+file 5
+mv 5 5.gz
+gzip -d 5.gz  
+ls  
+file 5  
+mv 5 5.bz  
+bzip2 -d 5.bz2  
+ls  
+file 5  
+mv 5 5.gz  
+gzip -d 5.gz    
+ls  
+file 5  
+mv 5 5.tar  
+tar -xvf 5.tar  
+file data5.bin  
+tar -xvf data5.bin  
+file data6.bin  
+mv data6.bin data6.bz2  
+bzip2 -d data6.bz2
+ls  
+file data6  
+tar -xvf data6  
+ls  
+file data8.bin  
+mv data8.bin data8.bin.gz  
+gzip -d data8.bin.gz
+ls  
+file data8.bin  
+cat data8.bin  
+
+#Bandit 13 -> Bandit 14
+ssh bandit13@bandit.labs.overthewire.org  
+8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL  
+ssh -i ./sshkey.private bandit14@localhost    
+
+#Bandit 14 -> Bandit 15  
+nc localhost 30000  
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e  
+
+#Bandit 15 -> Bandit 16  
+ssh bandit15@bandit.labs.overthewire.org  
+BfMYroe26WYalil77FoDi9qh59eK5xNr  
+echo "BfMYroe26WYalil77FoDi9qh59eK5xNr" | openssl s_client -ign_eof -connect localhost:30001  
+
+#Bandit 16 -> Bandit 17  
+ssh bandit16@bandit.labs.overthewire.org  
+cluFn7wTiGryunymYOu4RcffSxQluehd  
+namp -p 31000-32000 localhost  
+echo cluFn7wTiGryunymYOu4RcffSxQluehd | openssl s_client -ign_eof -connect localhost:31790  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
