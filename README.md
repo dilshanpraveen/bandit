@@ -364,20 +364,20 @@ bandit14@melinda:~$
 #Bandit 15 -> Bandit 16  
 root@bt:~# ssh bandit15@bandit.labs.overthewire.org    
 bandit15@bandit.labs.overthewire.org's password:BfMYroe26WYalil77FoDi9qh59eK5xNr         
-bandit15@melinda:~$ echo "BfMYroe26WYalil77FoDi9qh59eK5xNr" | openssl s_client -ign_eof -connect localhost:30001  
-CONNECTED(00000003)     
-depth=0 CN = li190-250.members.linode.com       
-verify error:num=18:self signed certificate         
-verify return:1           
-depth=0 CN = li190-250.members.linode.com            
-verify return:1    
----             
-Certificate chain                
- 0 s:/CN=li190-250.members.linode.com               
-   i:/CN=li190-250.members.linode.com                   
----           
-Server certificate           
------BEGIN CERTIFICATE-----           
+bandit15@melinda:~$ echo "BfMYroe26WYalil77FoDi9qh59eK5xNr" | openssl s_client -ign_eof -connect localhost:30001
+CONNECTED(00000003)
+depth=0 CN = li190-250.members.linode.com
+verify error:num=18:self signed certificate
+verify return:1
+depth=0 CN = li190-250.members.linode.com
+verify return:1
+---
+Certificate chain
+ 0 s:/CN=li190-250.members.linode.com
+   i:/CN=li190-250.members.linode.com
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
 MIIC3jCCAcagAwIBAgIJAI5QiWZw4YHbMA0GCSqGSIb3DQEBCwUAMCcxJTAjBgNV
 BAMTHGxpMTkwLTI1MC5tZW1iZXJzLmxpbm9kZS5jb20wHhcNMTQxMTE0MTAyODA0
 WhcNMjQxMTExMTAyODA0WjAnMSUwIwYDVQQDExxsaTE5MC0yNTAubWVtYmVycy5s
@@ -393,39 +393,39 @@ dMHFGAqAeUEaxtz92p2BoFpZasAtdSa3u63tBckFhfUolIS1TC7Cj51y19ysTeep
 fGPFpuPCVqVPsruei8Z/iqn3bFIhQQdmumeePZQdPMwZSWHNVYC5XODd7PvNDrDu
 5MZJjkz4+6LbwwAvyew62meFN2QEsYbK2Brtbhze+IjE27FGWlSw4K3jlwa409MD
 MTf4JU41ELaYY8G/LSNDJsBVhhkHzvXR9iCbXxNz3IL0dQDNj7h4LKhBy0q7hvqg
-kDzwlmBO4WKSmCAuky44cXmd       
------END CERTIFICATE-----            
-subject=/CN=li190-250.members.linode.com       
-issuer=/CN=li190-250.members.linode.com                    
----                
-No client certificate CA names sent    
----                        
-SSL handshake has read 1714 bytes and written 637 bytes                   
----                      
-New, TLSv1/SSLv3, Cipher is DHE-RSA-AES256-SHA                     
-Server public key is 2048 bit                  
-Secure Renegotiation IS supported                    
-Compression: NONE                     
-Expansion: NONE                 
-SSL-Session:                          
-    Protocol  : SSLv3                                 
-    Cipher    : DHE-RSA-AES256-SHA                        
-    Session-ID: 465F582880BA3493B95D60AFD027F193E8D7C10B87FE56346266255B05700E0A             
-    Session-ID-ctx:          
-    Master-Key: B3B221F6334CEC2045D364AEC7D0B8DD8F021316AEE9F9D51B0E1B9E9A1DEA59864FD6309DC0CFD65E2BD8EB22FF01B5    
-    Key-Arg   : None               
-    PSK identity: None                 
-    PSK identity hint: None                 
-    SRP username: None               
-    Start Time: 1440147446               
-    Timeout   : 300 (sec)                           
-    Verify return code: 18 (self signed certificate)                                
----                        
-Correct!                        
-cluFn7wTiGryunymYOu4RcffSxQluehd                   
-                    
-read:errno=0                            
-bandit15@melinda:~$       
+kDzwlmBO4WKSmCAuky44cXmd
+-----END CERTIFICATE-----
+subject=/CN=li190-250.members.linode.com
+issuer=/CN=li190-250.members.linode.com
+---
+No client certificate CA names sent
+---
+SSL handshake has read 1714 bytes and written 637 bytes
+---
+New, TLSv1/SSLv3, Cipher is DHE-RSA-AES256-SHA
+Server public key is 2048 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+SSL-Session:
+    Protocol  : SSLv3
+    Cipher    : DHE-RSA-AES256-SHA
+    Session-ID: 465F582880BA3493B95D60AFD027F193E8D7C10B87FE56346266255B05700E0A
+    Session-ID-ctx: 
+    Master-Key: B3B221F6334CEC2045D364AEC7D0B8DD8F021316AEE9F9D51B0E1B9E9A1DEA59864FD6309DC0CFD65E2BD8EB22FF01B5
+    Key-Arg   : None
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    Start Time: 1440147446
+    Timeout   : 300 (sec)
+    Verify return code: 18 (self signed certificate)
+---
+Correct!
+cluFn7wTiGryunymYOu4RcffSxQluehd
+
+read:errno=0
+bandit15@melinda:~$        
 
 #Bandit 16 -> Bandit 17  
 ssh bandit16@bandit.labs.overthewire.org  
