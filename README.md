@@ -272,45 +272,68 @@ The password is 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
 bandit11@melinda:~$      
 
 #Bandit 12 -> Bandit 13   
-ssh bandit12@bandit.labs.overthewire.org  
-5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu  
-ls  
-file data.txt  
-cd /tmp  
-mkdir strom1  
-cd strom1  
-cp ./data.txt /tmp/storm1  
-xxd -r data.txt 5
-file 5
-mv 5 5.gz
-gzip -d 5.gz  
-ls  
-file 5  
-mv 5 5.bz  
-bzip2 -d 5.bz2  
-ls  
-file 5  
-mv 5 5.gz  
-gzip -d 5.gz    
-ls  
-file 5  
-mv 5 5.tar  
-tar -xvf 5.tar  
-file data5.bin  
-tar -xvf data5.bin  
-file data6.bin  
-mv data6.bin data6.bz2  
-bzip2 -d data6.bz2
-ls  
-file data6  
-tar -xvf data6  
-ls  
-file data8.bin  
-mv data8.bin data8.bin.gz  
-gzip -d data8.bin.gz
-ls  
-file data8.bin  
-cat data8.bin  
+root@bt:~# ssh bandit12@bandit.labs.overthewire.org  
+bandit12@bandit.labs.overthewire.org's password:5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu  
+bandit12@melinda:~$ ls     
+data.txt          
+bandit12@melinda:~$ file data.txt     
+data.txt: ASCII text                
+bandit12@melinda:~$ cd /temp                 
+-bash: cd: /temp: No such file or directory                  
+bandit12@melinda:~$ cd /tmp                 
+bandit12@melinda:/tmp$ mkdir mule1              
+bandit12@melinda:/tmp$ cd mule1            
+bandit12@melinda:/tmp/mule1$           
+bandit12@melinda:/tmp/mule1$ cp ~/data.txt /tmp/mule1          
+bandit12@melinda:/tmp/mule1$ xxd-r data.txt 5        
+-bash: xxd-r: command not found             
+bandit12@melinda:/tmp/mule1$ xxd -r data.txt 5         
+bandit12@melinda:/tmp/mule1$ file 5        
+5: gzip compressed data, was "data2.bin", from Unix, last modified: Fri Nov 14 10:32:20 2014, max compression     
+bandit12@melinda:/tmp/mule1$ mv 5 5.gz       
+bandit12@melinda:/tmp/mule1$ gzip -d 5.gz         
+bandit12@melinda:/tmp/mule1$ ls            
+5  data.txt           
+bandit12@melinda:/tmp/mule1$ file 5            
+5: bzip2 compressed data, block size = 900k             
+bandit12@melinda:/tmp/mule1$ mv 5 5.bz2               
+bandit12@melinda:/tmp/mule1$ bzip2 -d 5.bz2                
+bandit12@melinda:/tmp/mule1$ ls               
+5  data.txt               
+bandit12@melinda:/tmp/mule1$ file 5              
+5: gzip compressed data, was "data4.bin", from Unix, last modified: Fri Nov 14 10:32:20 2014, max compression       
+bandit12@melinda:/tmp/mule1$ mv 5 5.gz            
+bandit12@melinda:/tmp/mule1$ gzip -d 5.gz             
+bandit12@melinda:/tmp/mule1$ ls           
+5  data.txt                     
+bandit12@melinda:/tmp/mule1$ file 5             
+5: POSIX tar archive (GNU)                 
+bandit12@melinda:/tmp/mule1$ mv 5 5.tar                     
+bandit12@melinda:/tmp/mule1$ tar -xvf 5.tar             
+data5.bin                     
+bandit12@melinda:/tmp/mule1$ file data5.bin                
+data5.bin: POSIX tar archive (GNU)                           
+bandit12@melinda:/tmp/mule1$ tar -xvf data5.bin                 
+data6.bin                              
+bandit12@melinda:/tmp/mule1$ mv data6.bin data6.bz2                       
+bandit12@melinda:/tmp/mule1$ bzip2 -d data6.bz2                         
+bandit12@melinda:/tmp/mule1$ ls                            
+5.tar  data.txt  data5.bin  data6                    
+bandit12@melinda:/tmp/mule1$ file data6                  
+data6: POSIX tar archive (GNU)                    
+bandit12@melinda:/tmp/mule1$ tar -xvf data6                 
+data8.bin                 
+bandit12@melinda:/tmp/mule1$ file data8.bin        
+data8.bin: gzip compressed data, was "data9.bin", from Unix, last modified: Fri Nov 14 10:32:20 2014, max compression    
+bandit12@melinda:/tmp/mule1$ mv data8.bin data8.bin.gz       
+bandit12@melinda:/tmp/mule1$ gzip -d data8.bin.gz                    
+bandit12@melinda:/tmp/mule1$ ls                    
+5.tar  data.txt  data5.bin  data6  data8.bin                  
+bandit12@melinda:/tmp/mule1$ file data8.bin                     
+data8.bin: ASCII text                             
+bandit12@melinda:/tmp/mule1$ cat data8.bin                   
+The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL                     
+bandit12@melinda:/tmp/mule1$                                 
 
 #Bandit 13 -> Bandit 14
 ssh bandit13@bandit.labs.overthewire.org  
