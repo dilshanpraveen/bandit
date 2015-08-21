@@ -363,21 +363,21 @@ bandit14@melinda:~$
 
 #Bandit 15 -> Bandit 16  
 root@bt:~# ssh bandit15@bandit.labs.overthewire.org    
-bandit15@bandit.labs.overthewire.org's password:BfMYroe26WYalil77FoDi9qh59eK5xNr         
-bandit15@melinda:~$ echo "BfMYroe26WYalil77FoDi9qh59eK5xNr" | openssl s_client -ign_eof -connect localhost:30001
-CONNECTED(00000003)
-depth=0 CN = li190-250.members.linode.com
-verify error:num=18:self signed certificate
-verify return:1
-depth=0 CN = li190-250.members.linode.com
-verify return:1
----
-Certificate chain
- 0 s:/CN=li190-250.members.linode.com
-   i:/CN=li190-250.members.linode.com
----
-Server certificate
------BEGIN CERTIFICATE-----
+bandit15@bandit.labs.overthewire.org's password:BfMYroe26WYalil77FoDi9qh59eK5xNr            
+bandit15@melinda:~$ echo "BfMYroe26WYalil77FoDi9qh59eK5xNr" | openssl s_client -ign_eof -connect localhost:30001        
+CONNECTED(00000003)                                      
+depth=0 CN = li190-250.members.linode.com                  
+verify error:num=18:self signed certificate                   
+verify return:1                   
+depth=0 CN = li190-250.members.linode.com                  
+verify return:1                              
+\---    
+Certificate chain    
+ 0 s:/CN=li190-250.members.linode.com   
+   i:/CN=li190-250.members.linode.com    
+\---   
+Server certificate    
+\-----BEGIN CERTIFICATE-----    
 MIIC3jCCAcagAwIBAgIJAI5QiWZw4YHbMA0GCSqGSIb3DQEBCwUAMCcxJTAjBgNV
 BAMTHGxpMTkwLTI1MC5tZW1iZXJzLmxpbm9kZS5jb20wHhcNMTQxMTE0MTAyODA0
 WhcNMjQxMTExMTAyODA0WjAnMSUwIwYDVQQDExxsaTE5MC0yNTAubWVtYmVycy5s
