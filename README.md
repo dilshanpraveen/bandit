@@ -630,70 +630,70 @@ bandit16@melinda:/tmp/key$ ssh -i ./uu.private bandit17@localhost
 Could not create directory '/home/bandit16/.ssh'.                     
 The authenticity of host 'localhost (127.0.0.1)' can't be established.                 
 ECDSA key fingerprint is 05:3a:1c:25:35:0a:ed:2f:cd:87:1c:f6:fe:69:e4:f6.
-Are you sure you want to continue connecting (yes/no)? yes                                  
+Are you sure you want to continue connecting (yes/no)? yes                                   
 
-#Bandit 17 -> Bandit 18                          
-bandit17@melinda:~$ ls
-passwords.new  passwords.old
-bandit17@melinda:~$ diff passwords.new passwords.old
-42c42
-\< kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
-\---
-\> BS8bqB1kqkinKJjuxL6k072Qq9NRwQpR
-bandit17@melinda:~$   
+#Bandit 17 -> Bandit 18                             
+bandit17@melinda:~$ ls   
+passwords.new  passwords.old    
+bandit17@melinda:~$ diff passwords.new passwords.old    
+42c42      
+\< kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd    
+\---     
+\> BS8bqB1kqkinKJjuxL6k072Qq9NRwQpR   
+bandit17@melinda:~$       
   
-#Bandit 18 -> Bandit 19    
-root@bt:~# ssh bandit18@bandit.labs.overthewire.org  
-bandit18@bandit.labs.overthewire.org's password:kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd   
-Byebye !               
-Connection to bandit.labs.overthewire.org closed.                
-root@bt:~#             
-root@bt:~# ssh -T bandit18@bandit.labs.overthewire.org 
-bandit18@bandit.labs.overthewire.org's password:kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd      
-ls 
-readme
-cat readme   
-IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x   
+#Bandit 18 -> Bandit 19       
+root@bt:~# ssh bandit18@bandit.labs.overthewire.org     
+bandit18@bandit.labs.overthewire.org's password:kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd       
+Byebye !                    
+Connection to bandit.labs.overthewire.org closed.                 
+root@bt:~#                 
+root@bt:~# ssh -T bandit18@bandit.labs.overthewire.org         
+bandit18@bandit.labs.overthewire.org's password:kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd           
+ls         
+readme       
+cat readme    
+IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x    
 
-#Bandit 19 -> Bandit 20  
-root@bt:~# ssh bandit19@bandit.labs.overthewire.org  
-bandit19@bandit.labs.overthewire.org's password:IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x    
-bandit19@melinda:~$ ls
-bandit20-do
-bandit19@melinda:~$ ls -l
-total 8
--rwsr-x--- 1 bandit20 bandit19 7370 Nov 14  2014 bandit20-do
-bandit19@melinda:~$ ./bandit20-do
-Run a command as another user.
-  Example: ./bandit20-do id
-bandit19@melinda:~$ ./bandit20-do id
-uid=11019(bandit19) gid=11019(bandit19) euid=11020(bandit20) groups=11020(bandit20),11019(bandit19)
-bandit19@melinda:~$ ./bandit20-do whoami
-bandit20
-bandit19@melinda:~$ ./bandit20-do cat /etc/bandit_pass/bandit20 
-GbKksEFF4yrVs6il55v6gwY5aVje5f0j
-bandit19@melinda:~$    
+#Bandit 19 -> Bandit 20        
+root@bt:~# ssh bandit19@bandit.labs.overthewire.org         
+bandit19@bandit.labs.overthewire.org's password:IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x     
+bandit19@melinda:~$ ls       
+bandit20-do          
+bandit19@melinda:~$ ls -l          
+total 8            
+-rwsr-x--- 1 bandit20 bandit19 7370 Nov 14  2014 bandit20-do           
+bandit19@melinda:~$ ./bandit20-do        
+Run a command as another user.         
+  Example: ./bandit20-do id          
+bandit19@melinda:~$ ./bandit20-do id           
+uid=11019(bandit19) gid=11019(bandit19) euid=11020(bandit20) groups=11020(bandit20),11019(bandit19)            
+bandit19@melinda:~$ ./bandit20-do whoami     
+bandit20     
+bandit19@melinda:~$ ./bandit20-do cat /etc/bandit_pass/bandit20   
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j       
+bandit19@melinda:~$          
 
 #Bandit 20 -> Bandit 21  
 root@bt:~# ssh bandit20@bandit.labs.overthewire.org  
 bandit20@bandit.labs.overthewire.org's password:GbKksEFF4yrVs6il55v6gwY5aVje5f0j      
-bandit20@melinda:~$ 
-bandit20@melinda:~$ ls
-suconnect
-bandit20@melinda:~$ ./suconnect 
-Usage: ./suconnect <portnumber>
-This program will connect to the given port on localhost using TCP. If it receives the correct password from the other side, the next password is transmitted back.
-bandit20@melinda:~$ nc -l 32005
-GbKksEFF4yrVs6il55v6gwY5aVje5f0j
-gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
-bandit20@melinda:~$   
+bandit20@melinda:~$        
+bandit20@melinda:~$ ls            
+suconnect              
+bandit20@melinda:~$ ./suconnect           
+Usage: ./suconnect <portnumber>        
+This program will connect to the given port on localhost using TCP. If it receives the correct password from the other side, the next password is transmitted back.        
+bandit20@melinda:~$ nc -l 32005           
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j        
+gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr         
+bandit20@melinda:~$               
 
-bandit20@melinda:~$ ls
-suconnect
-bandit20@melinda:~$ ./suconnect 32005
-Read: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
-Password matches, sending next password
-bandit20@melinda:~$  
+bandit20@melinda:~$ ls      
+suconnect          
+bandit20@melinda:~$ ./suconnect 32005       
+Read: GbKksEFF4yrVs6il55v6gwY5aVje5f0j      
+Password matches, sending next password        
+bandit20@melinda:~$      
 
 
 
