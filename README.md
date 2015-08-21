@@ -11,13 +11,15 @@ bandit0@melinda:~$
 #Bandit 1 -> Bandit 2    
 root@bt:~# ssh bandit1@bandit.labs.overthewire.org      
 bandit1@bandit.labs.overthewire.org's password:boJ9jbbUNNfktd78OOpsqOltutMc3MY1  
-bandit1@melinda:~$ ls     
--  
-bandit1@melinda:~$ ls -A   
--  .bash_logout  .bashrc  .profile  
-bandit1@melinda:~$ cat ./-  
-CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9  
-bandit1@melinda:~$       
+bandit1@melinda:~$ 
+bandit1@melinda:~$ ls
+-
+bandit1@melinda:~$ ls -A
+-  .bash_logout  .bashrc  .profile
+bandit1@melinda:~$ cat ./-
+CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+bandit1@melinda:~$ 
+       
 
 #Bandit 2 -> Bandit 3  
 root@bt:~# ssh bandit2@bandit.labs.overthewire.org  
