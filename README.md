@@ -663,13 +663,38 @@ bandit20-do
 bandit19@melinda:~$ ls -l
 total 8
 -rwsr-x--- 1 bandit20 bandit19 7370 Nov 14  2014 bandit20-do
+bandit19@melinda:~$ ./bandit20-do
+Run a command as another user.
+  Example: ./bandit20-do id
+bandit19@melinda:~$ ./bandit20-do id
+uid=11019(bandit19) gid=11019(bandit19) euid=11020(bandit20) groups=11020(bandit20),11019(bandit19)
+bandit19@melinda:~$ ./bandit20-do whoami
+bandit20
 bandit19@melinda:~$ ./bandit20-do cat /etc/bandit_pass/bandit20 
 GbKksEFF4yrVs6il55v6gwY5aVje5f0j
 bandit19@melinda:~$    
 
 #Bandit 20 -> Bandit 21  
-ssh bandit20@bandit.labs.overthewire.org  
-GbKksEFF4yrVs6il55v6gwY5aVje5f0j    
+root@bt:~# ssh bandit20@bandit.labs.overthewire.org  
+bandit20@bandit.labs.overthewire.org's password:GbKksEFF4yrVs6il55v6gwY5aVje5f0j      
+bandit20@melinda:~$ 
+bandit20@melinda:~$ ls
+suconnect
+bandit20@melinda:~$ ./suconnect 
+Usage: ./suconnect <portnumber>
+This program will connect to the given port on localhost using TCP. If it receives the correct password from the other side, the next password is transmitted back.
+bandit20@melinda:~$ nc -l 32005
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
+bandit20@melinda:~$   
+
+bandit20@melinda:~$ ls
+suconnect
+bandit20@melinda:~$ ./suconnect 32005
+Read: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+Password matches, sending next password
+bandit20@melinda:~$  
+
 
 
 
