@@ -369,7 +369,7 @@ CONNECTED(00000003)
 depth=0 CN = li190-250.members.linode.com       
 verify error:num=18:self signed certificate         
 verify return:1           
-depth=0 CN = li190-250.members.linode.com           
+depth=0 CN = li190-250.members.linode.com            
 verify return:1    
 ---             
 Certificate chain                
