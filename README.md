@@ -12,11 +12,11 @@ bandit0@melinda:~$
 root@bt:~# ssh bandit1@bandit.labs.overthewire.org      
 bandit1@bandit.labs.overthewire.org's password:boJ9jbbUNNfktd78OOpsqOltutMc3MY1  
 bandit1@melinda:~$             
-bandit1@melinda:~$ ls    
-  -
-bandit1@melinda:~$ ls -A             
-  -  .bash_logout  .bashrc  .profile            
-bandit1@melinda:~$ cat ./-               
+bandit1@melinda:~$ ls       
+\-   
+bandit1@melinda:~$ ls -A               
+\-  .bash_logout  .bashrc  .profile              
+bandit1@melinda:~$ cat ./-                    
 CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9               
 bandit1@melinda:~$              
        
@@ -338,9 +338,19 @@ The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
 bandit12@melinda:/tmp/mule1$                                 
 
 #Bandit 13 -> Bandit 14
-ssh bandit13@bandit.labs.overthewire.org  
-8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL  
-ssh -i ./sshkey.private bandit14@localhost    
+ root@bt:~# ssh bandit13@bandit.labs.overthewire.org    
+bandit13@bandit.labs.overthewire.org's password:8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL    
+bandit13@melinda:~$              
+bandit13@melinda:~$ ssh -i ./sshkey.private bandit14@localhost              
+Could not create directory '/home/bandit13/.ssh'.                      
+The authenticity of host 'localhost (127.0.0.1)' can't be established.            
+ECDSA key fingerprint is 05:3a:1c:25:35:0a:ed:2f:cd:87:1c:f6:fe:69:e4:f6.                 
+Are you sure you want to continue connecting (yes/no)? yes       
+bandit14@melinda:~$                 
+bandit14@melinda:~$ cat /etc/bandit_pass/bandit14           
+4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e           
+bandit14@melinda:~$                
+
 
 #Bandit 14 -> Bandit 15  
 nc localhost 30000  
