@@ -621,23 +621,51 @@ vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 -----END RSA PRIVATE KEY-----
 
 read:errno=0
-bandit16@melinda:~$ 
-#Bandit 17 -> Bandit 18
-ls  
-diff passwords.new passwords.old  
+bandit16@melinda:~$    
+bandit16@melinda:~$ mkdir -p /tmp/mule2   
+bandit16@melinda:~$ cd /tmp/mule2  
+bandit16@melinda:/tmp/key$ touch uu.private     
+bandit16@melinda:/tmp/key$ vim uu.private    
+bandit16@melinda:/tmp/key$ ssh -i ./uu.private bandit17@localhost     
+Could not create directory '/home/bandit16/.ssh'.
+The authenticity of host 'localhost (127.0.0.1)' can't be established.
+ECDSA key fingerprint is 05:3a:1c:25:35:0a:ed:2f:cd:87:1c:f6:fe:69:e4:f6.
+Are you sure you want to continue connecting (yes/no)? yes
 
-#Bandit 18 -> Bandit 19  
-ssh -T bandit18@bandit.labs.overthewire.org  
-kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd    
+#Bandit 17 -> Bandit 18
+bandit17@melinda:~$ ls
+passwords.new  passwords.old
+bandit17@melinda:~$ diff passwords.new passwords.old
+42c42
+\< kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
+\---
+\> BS8bqB1kqkinKJjuxL6k072Qq9NRwQpR
+bandit17@melinda:~$   
+  
+#Bandit 18 -> Bandit 19    
+root@bt:~# ssh bandit18@bandit.labs.overthewire.org  
+bandit18@bandit.labs.overthewire.org's password:kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd   
+Byebye !               
+Connection to bandit.labs.overthewire.org closed.                
+root@bt:~#             
+root@bt:~# ssh -T bandit18@bandit.labs.overthewire.org 
+bandit18@bandit.labs.overthewire.org's password:kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd      
 ls 
+readme
 cat readme   
+IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x   
 
 #Bandit 19 -> Bandit 20  
-ssh bandit19@bandit.labs.overthewire.org
-IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x  
-ls  
-ls -l  
-./bandit20-do cat /etc/bandit_pass/bandit20  
+root@bt:~# ssh bandit19@bandit.labs.overthewire.org  
+bandit19@bandit.labs.overthewire.org's password:IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x    
+bandit19@melinda:~$ ls
+bandit20-do
+bandit19@melinda:~$ ls -l
+total 8
+-rwsr-x--- 1 bandit20 bandit19 7370 Nov 14  2014 bandit20-do
+bandit19@melinda:~$ ./bandit20-do cat /etc/bandit_pass/bandit20 
+GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+bandit19@melinda:~$    
 
 #Bandit 20 -> Bandit 21  
 ssh bandit20@bandit.labs.overthewire.org  
