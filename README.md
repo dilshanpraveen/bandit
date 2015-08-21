@@ -393,87 +393,87 @@ dMHFGAqAeUEaxtz92p2BoFpZasAtdSa3u63tBckFhfUolIS1TC7Cj51y19ysTeep
 fGPFpuPCVqVPsruei8Z/iqn3bFIhQQdmumeePZQdPMwZSWHNVYC5XODd7PvNDrDu
 5MZJjkz4+6LbwwAvyew62meFN2QEsYbK2Brtbhze+IjE27FGWlSw4K3jlwa409MD
 MTf4JU41ELaYY8G/LSNDJsBVhhkHzvXR9iCbXxNz3IL0dQDNj7h4LKhBy0q7hvqg
-kDzwlmBO4WKSmCAuky44cXmd
------END CERTIFICATE-----
-subject=/CN=li190-250.members.linode.com
-issuer=/CN=li190-250.members.linode.com
----
-No client certificate CA names sent
----
-SSL handshake has read 1714 bytes and written 637 bytes
----
-New, TLSv1/SSLv3, Cipher is DHE-RSA-AES256-SHA
-Server public key is 2048 bit
-Secure Renegotiation IS supported
-Compression: NONE
-Expansion: NONE
-SSL-Session:
-    Protocol  : SSLv3
-    Cipher    : DHE-RSA-AES256-SHA
-    Session-ID: 465F582880BA3493B95D60AFD027F193E8D7C10B87FE56346266255B05700E0A
-    Session-ID-ctx: 
-    Master-Key: B3B221F6334CEC2045D364AEC7D0B8DD8F021316AEE9F9D51B0E1B9E9A1DEA59864FD6309DC0CFD65E2BD8EB22FF01B5
-    Key-Arg   : None
-    PSK identity: None
-    PSK identity hint: None
-    SRP username: None
-    Start Time: 1440147446
-    Timeout   : 300 (sec)
-    Verify return code: 18 (self signed certificate)
----
-Correct!
-cluFn7wTiGryunymYOu4RcffSxQluehd
-
-read:errno=0
-bandit15@melinda:~$        
+kDzwlmBO4WKSmCAuky44cXmd  
+\-----END CERTIFICATE-----   
+subject=/CN=li190-250.members.linode.com  
+issuer=/CN=li190-250.members.linode.com  
+\---   
+No client certificate CA names sent  
+\---  
+SSL handshake has read 1714 bytes and written 637 bytes     
+\---  
+New, TLSv1/SSLv3, Cipher is DHE-RSA-AES256-SHA  
+Server public key is 2048 bit   
+Secure Renegotiation IS supported     
+Compression: NONE              
+Expansion: NONE                   
+SSL-Session:                  
+    Protocol  : SSLv3                   
+    Cipher    : DHE-RSA-AES256-SHA                         
+    Session-ID: 465F582880BA3493B95D60AFD027F193E8D7C10B87FE56346266255B05700E0A        
+    Session-ID-ctx:                  
+    Master-Key: B3B221F6334CEC2045D364AEC7D0B8DD8F021316AEE9F9D51B0E1B9E9A1DEA59864FD6309DC0CFD65E2BD8EB22FF01B5      
+    Key-Arg   : None  
+    PSK identity: None                    
+    PSK identity hint: None               
+    SRP username: None   
+    Start Time: 1440147446     
+    Timeout   : 300 (sec)     
+    Verify return code: 18 (self signed certificate)   
+\--- 
+Correct!               
+cluFn7wTiGryunymYOu4RcffSxQluehd              
+       
+read:errno=0          
+bandit15@melinda:~$                      
 
 #Bandit 16 -> Bandit 17  
-root@bt:~# ssh bandit16@bandit.labs.overthewire.org    
-bandit16@bandit.labs.overthewire.org's password:cluFn7wTiGryunymYOu4RcffSxQluehd    
-bandit16@melinda:~$ 
-bandit16@melinda:~$ nmap -p 31000-32000 localhost
+root@bt:~# ssh bandit16@bandit.labs.overthewire.org      
+bandit16@bandit.labs.overthewire.org's password:cluFn7wTiGryunymYOu4RcffSxQluehd       
+bandit16@melinda:~$               
+bandit16@melinda:~$ nmap -p 31000-32000 localhost                 
 
-Starting Nmap 6.40 ( http://nmap.org ) at 2015-08-21 09:09 UTC
-Nmap scan report for localhost (127.0.0.1)
-Host is up (0.00085s latency).
-Not shown: 996 closed ports
-PORT      STATE SERVICE
-31046/tcp open  unknown
-31518/tcp open  unknown
-31691/tcp open  unknown
-31790/tcp open  unknown
-31960/tcp open  unknown
+Starting Nmap 6.40 ( http://nmap.org ) at 2015-08-21 09:09 UTC            
+Nmap scan report for localhost (127.0.0.1)          
+Host is up (0.00085s latency).                   
+Not shown: 996 closed ports                    
+PORT      STATE SERVICE                     
+31046/tcp open  unknown                    
+31518/tcp open  unknown                   
+31691/tcp open  unknown                 
+31790/tcp open  unknown                 
+31960/tcp open  unknown           
  
-Nmap done: 1 IP address (1 host up) scanned in 0.07 seconds
-bandit16@melinda:~$ echo cluFn7wTiGryunymYOu4RcffSxQluehd | openssl s_client -ign_eof -connect localhost:31046
-CONNECTED(00000003)
-140737354045088:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:s23_clnt.c:795:
----
-no peer certificate available
----
-No client certificate CA names sent
----
-SSL handshake has read 7 bytes and written 295 bytes
----
-New, (NONE), Cipher is (NONE)
-Secure Renegotiation IS NOT supported
-Compression: NONE
-Expansion: NONE
----
-bandit16@melinda:~$ echo cluFn7wTiGryunymYOu4RcffSxQluehd | openssl s_client -ign_eof -connect localhost:31518
-CONNECTED(00000003)
-depth=0 CN = li190-250.members.linode.com
-verify error:num=18:self signed certificate
-verify return:1
-depth=0 CN = li190-250.members.linode.com
-verify return:1
----
-Certificate chain
- 0 s:/CN=li190-250.members.linode.com
-   i:/CN=li190-250.members.linode.com
----
-Server certificate
------BEGIN CERTIFICATE-----
+Nmap done: 1 IP address (1 host up) scanned in 0.07 seconds                       
+bandit16@melinda:~$ echo cluFn7wTiGryunymYOu4RcffSxQluehd | openssl s_client -ign_eof -connect localhost:31046        
+CONNECTED(00000003)                         
+140737354045088:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:s23_clnt.c:795:     
+\---         
+no peer certificate available                     
+\---   
+No client certificate CA names sent   
+\---      
+SSL handshake has read 7 bytes and written 295 bytes        
+\--      
+New, (NONE), Cipher is (NONE)     
+Secure Renegotiation IS NOT supported                   
+Compression: NONE                    
+Expansion: NONE              
+\---              
+bandit16@melinda:~$ echo cluFn7wTiGryunymYOu4RcffSxQluehd | openssl s_client -ign_eof -connect localhost:31518  
+CONNECTED(00000003)    
+depth=0 CN = li190-250.members.linode.com       
+verify error:num=18:self signed certificate                    
+verify return:1                  
+depth=0 CN = li190-250.members.linode.com                   
+verify return:1       
+\---      
+Certificate chain     
+ 0 s:/CN=li190-250.members.linode.com                    
+   i:/CN=li190-250.members.linode.com          
+\---              
+Server certificate                
+\-----BEGIN CERTIFICATE-----            
 MIIC3jCCAcagAwIBAgIJAI5QiWZw4YHbMA0GCSqGSIb3DQEBCwUAMCcxJTAjBgNV
 BAMTHGxpMTkwLTI1MC5tZW1iZXJzLmxpbm9kZS5jb20wHhcNMTQxMTE0MTAyODA0
 WhcNMjQxMTExMTAyODA0WjAnMSUwIwYDVQQDExxsaTE5MC0yNTAubWVtYmVycy5s
@@ -489,65 +489,65 @@ dMHFGAqAeUEaxtz92p2BoFpZasAtdSa3u63tBckFhfUolIS1TC7Cj51y19ysTeep
 fGPFpuPCVqVPsruei8Z/iqn3bFIhQQdmumeePZQdPMwZSWHNVYC5XODd7PvNDrDu
 5MZJjkz4+6LbwwAvyew62meFN2QEsYbK2Brtbhze+IjE27FGWlSw4K3jlwa409MD
 MTf4JU41ELaYY8G/LSNDJsBVhhkHzvXR9iCbXxNz3IL0dQDNj7h4LKhBy0q7hvqg
-kDzwlmBO4WKSmCAuky44cXmd
------END CERTIFICATE-----
-subject=/CN=li190-250.members.linode.com
-issuer=/CN=li190-250.members.linode.com
----
-No client certificate CA names sent
----
-SSL handshake has read 1714 bytes and written 637 bytes
----
-New, TLSv1/SSLv3, Cipher is DHE-RSA-AES256-SHA
-Server public key is 2048 bit
-Secure Renegotiation IS supported
-Compression: NONE
-Expansion: NONE
-SSL-Session:
-    Protocol  : SSLv3
-    Cipher    : DHE-RSA-AES256-SHA
-    Session-ID: 82EE7A5EED336E724CE2D42EA5AE2B3683EEE297FCD9884C49900DC703304B79
-    Session-ID-ctx: 
-    Master-Key: 89CC03D96B81BC1F258E0DD8E319AEA50C9C7548368E9B9B4BFCA86660C9A5D605A8E9609E759754612ECC95C741AB7F
-    Key-Arg   : None
-    PSK identity: None
-    PSK identity hint: None
-    SRP username: None
-    Start Time: 1440148223
-    Timeout   : 300 (sec)
-    Verify return code: 18 (self signed certificate)
----
-cluFn7wTiGryunymYOu4RcffSxQluehd
-^C
-bandit16@melinda:~$ echo cluFn7wTiGryunymYOu4RcffSxQluehd | openssl s_client -ign_eof -connect localhost:31691
-CONNECTED(00000003)
-140737354045088:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:s23_clnt.c:795:
----
-no peer certificate available
----
-No client certificate CA names sent
----
-SSL handshake has read 7 bytes and written 295 bytes
----
-New, (NONE), Cipher is (NONE)
+kDzwlmBO4WKSmCAuky44cXmd             
+\-----END CERTIFICATE-----             
+subject=/CN=li190-250.members.linode.com                 
+issuer=/CN=li190-250.members.linode.com                
+ ---              
+No client certificate CA names sent            
+\---           
+SSL handshake has read 1714 bytes and written 637 bytes               
+\---              
+New, TLSv1/SSLv3, Cipher is DHE-RSA-AES256-SHA                
+Server public key is 2048 bit           
+Secure Renegotiation IS supported                   
+Compression: NONE            
+Expansion: NONE                 
+SSL-Session:          
+    Protocol  : SSLv3                           
+    Cipher    : DHE-RSA-AES256-SHA                              
+    Session-ID: 82EE7A5EED336E724CE2D42EA5AE2B3683EEE297FCD9884C49900DC703304B79               
+    Session-ID-ctx:            
+    Master-Key: 89CC03D96B81BC1F258E0DD8E319AEA50C9C7548368E9B9B4BFCA86660C9A5D605A8E9609E759754612ECC95C741AB7F       
+    Key-Arg   : None           
+    PSK identity: None              
+    PSK identity hint: None                
+    SRP username: None               
+    Start Time: 1440148223                
+    Timeout   : 300 (sec)                 
+    Verify return code: 18 (self signed certificate)          
+\---   
+cluFn7wTiGryunymYOu4RcffSxQluehd                 
+^C                    
+bandit16@melinda:~$ echo cluFn7wTiGryunymYOu4RcffSxQluehd | openssl s_client -ign_eof -connect localhost:31691     
+CONNECTED(00000003)   
+140737354045088:error:140770FC:SSL routines:SSL23_GET_SERVER_HELLO:unknown protocol:s23_clnt.c:795:     
+\---             
+no peer certificate available               
+\---                 
+No client certificate CA names sent                
+\---
+SSL handshake has read 7 bytes and written 295 bytes                 
+\---                      
+New, (NONE), Cipher is (NONE)                               
 Secure Renegotiation IS NOT supported
-Compression: NONE
-Expansion: NONE
----
-bandit16@melinda:~$ echo cluFn7wTiGryunymYOu4RcffSxQluehd | openssl s_client -ign_eof -connect localhost:31790
-CONNECTED(00000003)
-depth=0 CN = li190-250.members.linode.com
-verify error:num=18:self signed certificate
-verify return:1
-depth=0 CN = li190-250.members.linode.com
-verify return:1
----
-Certificate chain
- 0 s:/CN=li190-250.members.linode.com
-   i:/CN=li190-250.members.linode.com
----
-Server certificate
------BEGIN CERTIFICATE-----
+Compression: NONE                                       
+Expansion: NONE                 
+\---                                           
+bandit16@melinda:~$ echo cluFn7wTiGryunymYOu4RcffSxQluehd | openssl s_client -ign_eof -connect localhost:31790     
+CONNECTED(00000003)    
+depth=0 CN = li190-250.members.linode.com                   
+verify error:num=18:self signed certificate              
+verify return:1                
+depth=0 CN = li190-250.members.linode.com                 
+verify return:1           
+\---                         
+Certificate chain       
+ 0 s:/CN=li190-250.members.linode.com               
+   i:/CN=li190-250.members.linode.com                     
+\---                       
+Server certificate                    
+\-----BEGIN CERTIFICATE-----     
 MIIC3jCCAcagAwIBAgIJAI5QiWZw4YHbMA0GCSqGSIb3DQEBCwUAMCcxJTAjBgNV
 BAMTHGxpMTkwLTI1MC5tZW1iZXJzLmxpbm9kZS5jb20wHhcNMTQxMTE0MTAyODA0
 WhcNMjQxMTExMTAyODA0WjAnMSUwIwYDVQQDExxsaTE5MC0yNTAubWVtYmVycy5s
@@ -563,36 +563,36 @@ dMHFGAqAeUEaxtz92p2BoFpZasAtdSa3u63tBckFhfUolIS1TC7Cj51y19ysTeep
 fGPFpuPCVqVPsruei8Z/iqn3bFIhQQdmumeePZQdPMwZSWHNVYC5XODd7PvNDrDu
 5MZJjkz4+6LbwwAvyew62meFN2QEsYbK2Brtbhze+IjE27FGWlSw4K3jlwa409MD
 MTf4JU41ELaYY8G/LSNDJsBVhhkHzvXR9iCbXxNz3IL0dQDNj7h4LKhBy0q7hvqg
-kDzwlmBO4WKSmCAuky44cXmd
------END CERTIFICATE-----
-subject=/CN=li190-250.members.linode.com
-issuer=/CN=li190-250.members.linode.com
----
-No client certificate CA names sent
----
-SSL handshake has read 1714 bytes and written 637 bytes
----
-New, TLSv1/SSLv3, Cipher is DHE-RSA-AES256-SHA
-Server public key is 2048 bit
-Secure Renegotiation IS supported
-Compression: NONE
-Expansion: NONE
-SSL-Session:
-    Protocol  : SSLv3
-    Cipher    : DHE-RSA-AES256-SHA
-    Session-ID: C8C6CFB8EB9F4F6C0D05D59D4A38029EEE4C034775D0A58C7305C0EBCCAA7340
-    Session-ID-ctx: 
-    Master-Key: EEB44FD8C43CC2C3426E435F2649D1C470F0EAC3BB6B07A3104DCAB29EDE83398937C662D01D22CD8BB55E51A27AEBAE
-    Key-Arg   : None
-    PSK identity: None
-    PSK identity hint: None
-    SRP username: None
-    Start Time: 1440148243
-    Timeout   : 300 (sec)
-    Verify return code: 18 (self signed certificate)
----
-Correct!
------BEGIN RSA PRIVATE KEY-----
+kDzwlmBO4WKSmCAuky44cXmd           
+\-----END CERTIFICATE-----                   
+subject=/CN=li190-250.members.linode.com                   
+issuer=/CN=li190-250.members.linode.com             
+\---                       
+No client certificate CA names sent                
+\---                                               
+SSL handshake has read 1714 bytes and written 637 bytes                      
+\ ---                         
+New, TLSv1/SSLv3, Cipher is DHE-RSA-AES256-SHA                 
+Server public key is 2048 bit             
+Secure Renegotiation IS supported               
+Compression: NONE               
+Expansion: NONE              
+SSL-Session:               
+    Protocol  : SSLv3               
+    Cipher    : DHE-RSA-AES256-SHA                              
+    Session-ID: C8C6CFB8EB9F4F6C0D05D59D4A38029EEE4C034775D0A58C7305C0EBCCAA7340                
+    Session-ID-ctx:                          
+    Master-Key: EEB44FD8C43CC2C3426E435F2649D1C470F0EAC3BB6B07A3104DCAB29EDE83398937C662D01D22CD8BB55E51A27AEBAE          
+    Key-Arg   : None                                  
+    PSK identity: None           
+    PSK identity hint: None                
+    SRP username: None              
+    Start Time: 1440148243             
+    Timeout   : 300 (sec)               
+    Verify return code: 18 (self signed certificate)                   
+\---             
+Correct!                          
+\----BEGIN RSA PRIVATE KEY-----    
 MIIEogIBAAKCAQEAvmOkuifmMg6HL2YPIOjon6iWfbp7c3jx34YkYWqUH57SUdyJ
 imZzeyGC0gtZPGujUSxiJSWI/oTqexh+cAMTSMlOJf7+BrJObArnxd9Y7YT2bRPQ
 Ja6Lzb558YW3FZl87ORiO+rW4LCDCNd2lUvLE/GL2GWyuKN0K5iCd5TbtJzEkQTu
@@ -617,22 +617,22 @@ blh9elyZ9FsGxsgtRBXRsqXuz7wtsQAgLHxbdLq/ZJQ7YfzOKU4ZxEnabvXnvWkU
 YOdjHdSOoKvDQNWu6ucyLRAWFuISeXw9a/9p7ftpxm0TSgyvmfLF2MIAEwyzRqaM
 77pBAoGAMmjmIJdjp+Ez8duyn3ieo36yrttF5NSsJLAbxFpdlc1gvtGCWW+9Cq0b
 dxviW8+TFVEBl1O4f7HVm6EpTscdDxU+bCXWkfjuRb7Dy9GOtt9JPsX8MBTakzh3
-vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
------END RSA PRIVATE KEY-----
-
-read:errno=0
-bandit16@melinda:~$    
-bandit16@melinda:~$ mkdir -p /tmp/mule2   
-bandit16@melinda:~$ cd /tmp/mule2  
-bandit16@melinda:/tmp/key$ touch uu.private     
-bandit16@melinda:/tmp/key$ vim uu.private    
-bandit16@melinda:/tmp/key$ ssh -i ./uu.private bandit17@localhost     
-Could not create directory '/home/bandit16/.ssh'.
-The authenticity of host 'localhost (127.0.0.1)' can't be established.
+vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=   
+\-----END RSA PRIVATE KEY-----   
+   
+read:errno=0        
+bandit16@melinda:~$                                   
+bandit16@melinda:~$ mkdir -p /tmp/mule2                     
+bandit16@melinda:~$ cd /tmp/mule2                    
+bandit16@melinda:/tmp/key$ touch uu.private                         
+bandit16@melinda:/tmp/key$ vim uu.private                       
+bandit16@melinda:/tmp/key$ ssh -i ./uu.private bandit17@localhost                      
+Could not create directory '/home/bandit16/.ssh'.                     
+The authenticity of host 'localhost (127.0.0.1)' can't be established.                 
 ECDSA key fingerprint is 05:3a:1c:25:35:0a:ed:2f:cd:87:1c:f6:fe:69:e4:f6.
-Are you sure you want to continue connecting (yes/no)? yes
+Are you sure you want to continue connecting (yes/no)? yes                                  
 
-#Bandit 17 -> Bandit 18
+#Bandit 17 -> Bandit 18                          
 bandit17@melinda:~$ ls
 passwords.new  passwords.old
 bandit17@melinda:~$ diff passwords.new passwords.old
